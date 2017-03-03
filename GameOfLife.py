@@ -91,6 +91,7 @@ def countNeighbors(row, col, A):
         liveCounter += 1
     return liveCounter
 ############################################################
+#part9
 def next_life_generation(A):
     '''makes a copy of A and then advanced one generation
        of Conways's game of life within the *inner cels* of
@@ -106,8 +107,9 @@ def next_life_generation(A):
                  newA[row][col] = 0
     return newA
 ############################################################
+#part10
 def interact():
-#'''Interact with a use to play Conway's Game of Life.'''
+'''Interact with a use to play Conway's Game of Life.'''
     line = raw_input("Enter Command:")
     line = line.replace(" ", "")
     while line[0] != "q":
