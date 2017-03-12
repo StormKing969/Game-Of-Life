@@ -1,4 +1,3 @@
-############################################################
 #part1
 def createOneRow(width):
     row=[]
@@ -109,7 +108,7 @@ def next_life_generation(A):
 ############################################################
 #part10
 def interact():
-'''Interact with a use to play Conway's Game of Life.'''
+    """Interact with a use to play Conway's Game of Life."""
     line = raw_input("Enter Command:")
     line = line.replace(" ", "")
     while line[0] != "q":
@@ -145,9 +144,8 @@ def interact():
             nextGen = line[1:]
             while nextGen != 0:
                 A = next_life_generation(A)
-                finalA = enter(w, h, A)
                 evaluate -= 1 #decrement 
-                printBoard(finalA)
+                printBoard(enter(w, h, A))
         elif command == 'h':
             print "n-enter height width for the board"
             print "i-start life"
@@ -159,4 +157,5 @@ def interact():
         line = raw_input("Enter Command: ")
         line = line.replace(" ", "")
     print "Life is over\n"
-############################################################
+
+interact()
